@@ -1,9 +1,13 @@
-var User = {
-    name: "hitesh",
-    email: "hitesh@lco.dev",
-    isActive: true
+// const User = {
+//     name: "hitesh",
+//     email: "hitesh@lco.dev",
+//     isActive: true
+// }
+var myUser = {
+  _id: "1234",
+  name: "h",
+  email: "h@h.com",
+  isActive: false,
 };
-function createUser(_a) {
-    var string = _a.name, boolean = _a.isPaid;
-}
-createUser();
+myUser.email = "h@gmail.com";
+// myUser._id = "abc"
