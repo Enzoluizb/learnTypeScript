@@ -8,4 +8,4 @@ class User {
     }
 }
 
-const asi = new User("a@a.com", "asi")
+// const asi = new User("h@h.com", "haitech")
