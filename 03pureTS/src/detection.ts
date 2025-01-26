@@ -38,5 +38,23 @@ function isAdminAccount(account: User | Admin) {
     if ("isAdmin" in account) {
         return account.isAdmin
     }
-    return account
+    // return account
+}
+
+interface RegularUser {
+    name: string;
+    email: string;
+}
+
+interface PremiumUser {
+    name: string;
+    email: string;
+    isPremium: boolean;
+}
+
+function isPremiumAccount(account: RegularUser | PremiumUser): boolean {
+    if ("isPremium" in account) {
+        return account.isPremium;
+    }
+    return false;
 }
