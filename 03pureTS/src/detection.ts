@@ -58,3 +58,21 @@ function isPremiumAccount(account: RegularUser | PremiumUser): boolean {
     }
     return false;
 }
+
+interface WildAnimal {
+    species: string;
+    habitat: string;
+}
+
+interface DomesticatedAnimal {
+    species: string;
+    habitat: string;
+    isDomesticated: boolean;
+}
+
+function isDomesticatedAnimal(animal: WildAnimal | DomesticatedAnimal): boolean {
+    if ("isDomesticated" in animal) {
+        return animal.isDomesticated;
+    }
+    return false;
+}
