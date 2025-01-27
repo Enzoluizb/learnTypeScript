@@ -8,3 +8,26 @@ function formatInput(input: string | number) {
         return input.toFixed(2); // Narrowed para number
     }
 }
+
+// narrowing com instanceof
+// instanceof verifica a instância de uma classe, permitindo que o TypeScript entenda qual tipo está sendo manipulado.
+
+class Dog {
+    bark() {
+        console.log("Woof!");
+    }
+}
+
+class Cat {
+    meow() {
+        console.log("Meow!");
+    }
+}
+
+function speak(animal: Dog | Cat) {
+    if (animal instanceof Dog) {
+        animal.bark(); // Narrowed para Dog
+    } else {
+        animal.meow(); // Narrowed para Cat
+    }
+}
