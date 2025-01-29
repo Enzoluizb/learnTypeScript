@@ -31,3 +31,20 @@ function speak(animal: Dog | Cat) {
         animal.meow(); // Narrowed para Cat
     }
 }
+
+// narrowed com in
+// operador in verifica se uma propriedade específica existe no objeto, ajudando a determinar o tipo.
+
+interface Car {
+    drive(): string;
+}
+
+interface Boat {
+    sail(): string;
+}
+
+function move(vehicle: Car | Boat) {
+    if ("drive" in vehicle) {
+        return vehicle.drive(); // Narrowed para Car
+    }
+}
